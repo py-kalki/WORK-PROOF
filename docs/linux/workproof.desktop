@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=WorkProof
+Exec=python3 -m workproof.main
+X-GNOME-Autostart-enabled=true
+
+

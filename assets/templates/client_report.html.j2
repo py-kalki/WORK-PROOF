@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WorkProof Client Report ({{ start }} — {{ end }})</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #222; }
+    h1, h2 { color: #52129e; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; }
+    .kv { display: grid; grid-template-columns: 220px 1fr; gap: 8px; }
+    img { max-width: 100%; }
+  </style>
+  </head>
+<body>
+  <h1>WorkProof Client Report</h1>
+  <div class="kv">
+    <div>Range</div><div>{{ start }} — {{ end }}</div>
+    <div>Project</div><div>{{ project }}</div>
+    <div>Total Active Time</div><div>{{ (totals.active_seconds // 3600) }}h {{ ((totals.active_seconds % 3600) // 60) }}m</div>
+  </div>
+  <div class="grid" style="margin-top: 16px;">
+    <div class="card">
+      <h2>Daily Active Hours</h2>
+      <img src="{{ charts.bar_daily }}" />
+    </div>
+    <div class="card">
+      <h2>App Usage</h2>
+      <img src="{{ charts.pie_apps }}" />
+      <ul>
+        {% for a in top_apps %}
+        <li>{{ a.app }} — {{ (a.seconds // 3600) }}h {{ ((a.seconds % 3600) // 60) }}m</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top: 16px;">
+    <h2>Weekly Trend</h2>
+    <img src="{{ charts.line_weekly }}" />
+  </div>
+</body>
+</html>
+
+

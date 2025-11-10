@@ -1,0 +1,6 @@
+{"timestamp": "2025-01-01T10:00:00+00:00", "active_app": "VSCode", "running_apps": ["VSCode","Chrome"], "idle_seconds": 5, "project_path": null, "event_type": "sample", "meta": null}
+{"timestamp": "2025-01-01T10:00:10+00:00", "active_app": "VSCode", "running_apps": ["VSCode","Chrome"], "idle_seconds": 0, "project_path": null, "event_type": "sample", "meta": null}
+{"timestamp": "2025-01-01T10:05:00+00:00", "active_app": "Chrome", "running_apps": ["VSCode","Chrome"], "idle_seconds": 15, "project_path": null, "event_type": "sample", "meta": null}
+{"timestamp": "2025-01-01T11:00:00+00:00", "active_app": null, "running_apps": [], "idle_seconds": 0, "project_path": "Projects/Demo", "event_type": "file_modified", "meta": {"src_path": "Projects/Demo/file.txt"}}
+
+

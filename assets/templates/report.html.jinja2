@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WorkProof Report - {{ day }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #222; }
+    h1, h2 { color: #2b3a67; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; }
+    .kv { display: grid; grid-template-columns: 200px 1fr; gap: 8px; }
+    .muted { color: #666; }
+    img { max-width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>WorkProof Daily Report</h1>
+  <p class="muted">Date: {{ day }}</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Overview</h2>
+      <div class="kv">
+        <div>Total samples</div><div>{{ summary.total_samples }}</div>
+        <div>Total idle seconds</div><div>{{ summary.total_idle_seconds }}</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Top Applications</h2>
+      <img src="{{ chart_apps }}" alt="Top Apps Chart" />
+      <ul>
+        {% for app, seconds in summary.top_apps %}
+        <li>{{ app }} — {{ seconds }}s</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top: 16px;">
+    <h2>Project File Events</h2>
+    <ul>
+      {% for proj, cnt in summary.project_events.items() %}
+      <li>{{ proj }} — {{ cnt }} events</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
+
+
+

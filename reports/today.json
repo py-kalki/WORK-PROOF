@@ -1,0 +1,47 @@
+{
+  "date": "2025-11-10",
+  "active_seconds": 450,
+  "idle_seconds": 296,
+  "top_apps": [
+    {
+      "app": "packaging.md - TRYING - Cursor",
+      "seconds": 210
+    },
+    {
+      "app": "Welcome - TRYING - Visual Studio Code",
+      "seconds": 160
+    },
+    {
+      "app": "Google Keep and 3 more pages - Personal - Microsoft\u200b Edge",
+      "seconds": 30
+    },
+    {
+      "app": "WhatsApp",
+      "seconds": 20
+    },
+    {
+      "app": "Unknown",
+      "seconds": 10
+    },
+    {
+      "app": "Snipping Tool Overlay",
+      "seconds": 10
+    },
+    {
+      "app": "New tab and 3 more pages - Personal - Microsoft\u200b Edge",
+      "seconds": 10
+    }
+  ],
+  "top_projects": [],
+  "proofs_count": 0,
+  "sessions": [
+    {
+      "start": "2025-11-10T10:33:18.845666+00:00",
+      "end": "2025-11-10T10:44:04.368175+00:00",
+      "main_app": "Welcome - TRYING - Visual Studio Code",
+      "samples": 45,
+      "files_edited": 0,
+      "proofs_count": 0
+    }
+  ]
+}
